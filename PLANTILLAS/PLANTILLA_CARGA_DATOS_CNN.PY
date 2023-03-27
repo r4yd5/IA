@@ -56,13 +56,7 @@ def cargar_imagenes(path_aceptadas,path_rechazadas):
         elif i>0.8*len(data) and i<=0.9*len(data):
             x_val.append(img)
             y_val.append(label)
-        else:
-            if una_vez:
-                prueba = cv2.imread(r'C:\Users\Juan Manuel Sanchez\Desktop\CNN_BD125X2\RECHAZADAS/R34.jpg')
-                prueba = cv2.resize(prueba,(224,224))
-                x_test.append(prueba)
-                y_test.append(label)
-                una_vez = False
+        else:   
             x_test.append(img)
             y_test.append(label)
             
